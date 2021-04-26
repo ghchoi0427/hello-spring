@@ -1,6 +1,5 @@
 package com.web.domain;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -13,6 +12,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table
 public class User implements Serializable {
+
 
     @Id
     @Column
@@ -34,7 +34,6 @@ public class User implements Serializable {
     @Column
     private LocalDateTime updatedDate;
 
-    @Builder
     public User(String name, String password, String email, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.name = name;
         this.password = password;
