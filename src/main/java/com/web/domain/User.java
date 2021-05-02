@@ -34,6 +34,7 @@ public class User implements Serializable {
 
     @Column
     private LocalDateTime updatedDate;
+
     @Builder
     public User(String name, String password, String email, LocalDateTime createdDate, LocalDateTime updatedDate) {
         this.name = name;
