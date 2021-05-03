@@ -1,12 +1,13 @@
 package com.web.domain;
 
+import com.web.domain.enums.BoardType;
+import java.io.Serializable;
+import java.time.LocalDateTime;
+import javax.persistence.*;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.time.LocalDateTime;
 
 @Getter
 @NoArgsConstructor
@@ -17,7 +18,7 @@ public class Board implements Serializable {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idx;
+    private Long idx;
 
     @Column
     private String title;
@@ -38,7 +39,7 @@ public class Board implements Serializable {
     @Column
     private LocalDateTime updatedDate;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch= FetchType.LAZY)
     private User user;
 
     @Builder
