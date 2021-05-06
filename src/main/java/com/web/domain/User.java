@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 @Table
 public class User implements Serializable {
 
-
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
