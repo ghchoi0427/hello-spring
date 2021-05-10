@@ -19,7 +19,7 @@ public class BootWebApplication {
     public static void main(String[] args) {
         SpringApplication.run(BootWebApplication.class, args);
     }
-
+/*
     @Bean
     public CommandLineRunner runner(UserRepository userRepository, BoardRepository boardRepository) throws Exception {
         return args -> {
@@ -41,5 +41,5 @@ public class BootWebApplication {
                     .build())
             );
         };
-    }
+    }*/
 }
