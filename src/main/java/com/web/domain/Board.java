@@ -39,7 +39,7 @@ public class Board implements Serializable {
     private LocalDateTime updateDate;
 
     @OneToOne(fetch = FetchType.LAZY)
-    private User =user;
+    private User user;
 
     @Builder
     public Board(String title, String subTitle, String content, BoardType boardType, LocalDateTime createdDate, LocalDateTime updateDate) {
